@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --altfont: rgb(0, 0, 0);
+  --font: #ffffff;
+  --sans: "Poppins", sans-serif;
+  --lines: #ffffff91;
+  --background: rgb(27, 27, 27);
+}
+
+.nav-top {
+  width: 100vw;
+}
+.nav {
+  width: 100vw;
+  position: fixed;
+  font-size: 16.8px;
+  font-family: var(--sans);
+  font-weight: 300;
+  font-style: italic;
+  height: 57px;
+  align-items: center;
+  justify-content: right;
+  display: flex;
+  flex-direction: row;
+  color: var(--font);
+}
+.nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  list-style-type: none;
+}
+.nav div:last-child {
+  margin-right: 70px;
+}
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body {
+  z-index: -3;
+  background-color: var(--background);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+.lvlb {
+  height: 570px;
+  width: 71px;
+  background-color: var(--background);
+  position: fixed;
+  left: 85px;
+  top: 50%;
+  border-radius: 50px;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.lcs {
+  font-family: var(--sans);
+  font-weight: 100;
+  font-size: 16.8px;
+  color: var(--font);
+  text-align: center;
+  line-height: 60px;
+  margin: 0 auto;
+  border: var(--lines) solid 1px;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  user-select: none;
+  font-style: italic;
+  padding: 2px;
+}
+.lcs:hover {
+  font-weight: 300;
+  border: var(--font) solid 3px;
+  padding: 0;
+}
+#alcs {
+  font-weight: 300;
+  border: var(--font) solid 3px;
+  margin: 0 auto;
+  padding: 0;
+}
+.blgcrd {
+  color: var(--font);
+  width: 400px;
+  height: 300px;
+  border: solid 1px white;
+}
+
+.crdtxt {
+  font-family: var(--sans);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 20px;
+}
