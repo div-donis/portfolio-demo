@@ -3,10 +3,10 @@ import BlogFilterCard from "./BlogFilterCard";
 
 const BlogFilterContainer = ({ langs, activeLang, setActiveLang }) => {
   return (
-    <div className="lvlb">
-      {langs?.map((lang) => (
+    <div className="blog-filter-container">
+      {langs?.map((lang, index) => (
         <BlogFilterCard
-          key={lang}
+          key={index}
           lang={lang}
           active={activeLang === lang}
           onClick={() => setActiveLang(lang)}

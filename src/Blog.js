@@ -1,5 +1,6 @@
 import React from "react";
 import BlogFilterContainer from "./BlogFilterContainer";
+import BlogContainer from "./BlogContainer";
 import { useState, useEffect } from "react";
 
 const Blog = () => {
@@ -27,48 +28,19 @@ const Blog = () => {
 
   const [activeLang, setActiveLang] = useState("All");
   const langs = ["All", "JS", "React", "Redux", "Ruby", "Rails", "AWS", "SQL"];
-  console.log(blog.item[0]);
-
-  const stripHtml = (html) => {
-    let tmp = document.createElement("DIV");
-    tmp.innerHTML = html;
-    return tmp.textContent || tmp.innerText || "";
-  };
 
   const filteredBlogs = blog.item.filter((i) =>
     i.categories.includes(activeLang.toLowerCase())
   );
 
   return (
-    <div classname="blog">
+    <div className="blog">
       <BlogFilterContainer
         langs={langs}
         activeLang={activeLang}
         setActiveLang={setActiveLang}
       />
-      <div className="crdcnt">
-        {activeLang === "All"
-          ? blog.item.map((post) => (
-              <div className="blgcrd">
-                <div className="crdbdy">
-                  <a href={post.link}>
-                    <div className="crdttl">{post.title}</div>
-                  </a>
-                  <div className="crdtxt">{stripHtml(post.description)}</div>
-                </div>
-              </div>
-            ))
-          : filteredBlogs.map((post) => (
-              <div className="blgcrd">
-                <div className="crdbdy">
-                  <a href={post.link}>
-                    <div className="crdttl">{post.title}</div>
-                  </a>
-                  <div className="crdtxt">{stripHtml(post.description)}</div>
-                </div>
-              </div>
-            ))}
-      </div>
+      <BlogContainer posts={activeLang === "All" ? blog.item : filteredBlogs} />
     </div>
   );
 };
