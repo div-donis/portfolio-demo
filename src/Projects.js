@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Link, Route } from "react-router-dom";
 
-const Dashboard = () => {
+const Projects = () => {
   return (
     <div className="dashboard">
       <div>
@@ -36,4 +36,4 @@ export const Quotes = () => {
   return <></>;
 };
 
-export default Dashboard;
+export default Projects;

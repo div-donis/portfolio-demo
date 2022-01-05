@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink as Link, Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
+import Projects from "./Projects";
 import Home from "./Home";
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
           <div>
             <Link
               style={{ textDecoration: "none", color: "var(--font)" }}
-              to="/dashboard"
+              to="/projects"
             >
-              Dashboard
+              Projects
             </Link>
           </div>
           <div>
@@ -39,7 +39,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
-          <Route path="dashboard/*" element={<Dashboard />}></Route>
+          <Route path="projects/*" element={<Projects />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
