@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "0.24.0",
-    "medium-post": "0.0.1-security",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "4.3.1",

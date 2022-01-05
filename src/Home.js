@@ -30,8 +30,8 @@ const Home = () => {
     </div>
   );
 
-  const [activeLang, setActiveLang] = useState("JS");
-  const langs = ["JS", "React", "Redux", "Rails", "AWS", "SQL", "Node", "Git"];
+  const [activeLang, setActiveLang] = useState("All");
+  const langs = ["All", "JS", "React", "Redux", "Ruby", "Rails", "AWS", "SQL"];
   console.log(blog.item[0]);
 
   const stripHtml = (html) => {
@@ -39,6 +39,12 @@ const Home = () => {
     tmp.innerHTML = html;
     return tmp.textContent || tmp.innerText || "";
   };
+
+  const filteredBlogs = blog.item.filter((i) =>
+    i.categories.includes(activeLang.toLowerCase())
+  );
+
+  console.log(filteredBlogs);
 
   return (
     <div className="home">
@@ -52,19 +58,28 @@ const Home = () => {
           />
         ))}
       </div>
-      <div>
-        {blog.item.map((post, index) => (
-          <div key={index} className="blgcrd">
-            <div
-              className="crdimg"
-              style={{ backgroundImage: `url(${post.thumbnail})` }}
-            ></div>
-            <div className="crdbdy">
-              <div className="crdttl">{post.title}</div>
-              <div className="crdtxt">{stripHtml(post.description)}</div>
-            </div>
-          </div>
-        ))}
+      <div className="crdcnt">
+        {activeLang === "All"
+          ? blog.item.map((post) => (
+              <div className="blgcrd">
+                <div className="crdbdy">
+                  <a href={post.link}>
+                    <div className="crdttl">{post.title}</div>
+                  </a>
+                  <div className="crdtxt">{stripHtml(post.description)}</div>
+                </div>
+              </div>
+            ))
+          : filteredBlogs.map((post) => (
+              <div className="blgcrd">
+                <div className="crdbdy">
+                  <a href={post.link}>
+                    <div className="crdttl">{post.title}</div>
+                  </a>
+                  <div className="crdtxt">{stripHtml(post.description)}</div>
+                </div>
+              </div>
+            ))}
       </div>
     </div>
   );
