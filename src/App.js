@@ -3,7 +3,7 @@ import { NavLink as Link, Route, Routes } from "react-router-dom";
 import Projects from "./Projects";
 import Home from "./Home";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="nav-top">
@@ -45,7 +45,7 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export const About = () => {
   return (
