@@ -3,7 +3,7 @@ import { Routes, Link, Route } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <div className="dashboard">
+    <div className="projects">
       <div>
         <Routes>
           <Route path="/" element={<Profile />}></Route>
