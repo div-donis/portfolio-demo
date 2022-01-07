@@ -27,7 +27,11 @@ const Projects = () => {
 };
 
 export const Profile = () => {
-  return <></>;
+  return (
+    <div className="polymr">
+      <img alt="polymr" id="polymr-gif" src="https://i.imgur.com/oytBkBY.gif" />
+    </div>
+  );
 };
 export const Orders = () => {
   return <></>;
