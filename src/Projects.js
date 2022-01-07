@@ -29,7 +29,23 @@ const Projects = () => {
 export const Profile = () => {
   return (
     <div className="polymr">
-      <img alt="polymr" id="polymr-gif" src="https://i.imgur.com/oytBkBY.gif" />
+      <div className="project-slider">
+        <img
+          alt="polymr"
+          className="polymr-gif"
+          src="https://i.imgur.com/rg30RZ5.gif"
+        />
+        <img
+          alt="polymr"
+          className="polymr-gif"
+          src="https://i.imgur.com/8rBqvvj.gif"
+        />
+        <img
+          alt="polymr"
+          className="polymr-gif"
+          src="https://i.imgur.com/uWSUDxU.gif"
+        />
+      </div>
     </div>
   );
 };
