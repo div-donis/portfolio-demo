@@ -52,7 +52,7 @@ body {
 }
 
 .project-links {
-  width: 100vw;
+  width: 100%;
   position: relative;
   top: 85px;
   list-style-type: none;
@@ -73,20 +73,20 @@ body {
   color: var(--font);
 }
 .polymr {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
 .polymr-gif {
   margin: 85px 120px 0 120px;
-  height: 600px;
+  width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .project-slider {
+  scroll-behavior: smooth;
   margin-top: 110px;
   display: flex;
-  width: 90%;
-  height: 760px;
+  width: 1240px;
   flex-direction: row;
   box-sizing: content-box;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -99,4 +99,14 @@ body {
 }
 .project-slider:last-child {
   margin-right: 0;
+}
+#right-arrow{
+  color: var(--font);
+  align-self: center;
+  padding-top: 195px;
+}
+#left-arrow{
+  color: var(--font);
+  align-self: center;
+  padding-top: 195px;
 }
