@@ -38,8 +38,9 @@ a:active {
   text-decoration: underline;
 }
 .blog-card-title {
-  font-weight: 600;
-  font-size: 25px;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 24px;
   cursor: pointer;
 }
 .blog-card-text {

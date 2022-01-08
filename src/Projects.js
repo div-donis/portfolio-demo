@@ -4,24 +4,16 @@ import { Routes, Link, Route } from "react-router-dom";
 const Projects = () => {
   return (
     <div className="projects">
-      <div>
-        <Routes>
-          <Route path="/" element={<Profile />}></Route>
-          <Route path="orders" element={<Orders />}></Route>
-          <Route path="quotes" element={<Quotes />}></Route>
-        </Routes>
-      </div>
-      <ul>
+      <ul className="project-links">
         <li>
-          <Link to="">Profile</Link>
-        </li>
-        <li>
-          <Link to="orders">Orders</Link>
-        </li>
-        <li>
-          <Link to="quotes">Quotes</Link>
+          <Link to="">polymr (beta)</Link>
         </li>
       </ul>
+      <div>
+        <Routes>
+          <Route path="" element={<Profile />}></Route>
+        </Routes>
+      </div>
     </div>
   );
 };
@@ -33,17 +25,17 @@ export const Profile = () => {
         <img
           alt="polymr"
           className="polymr-gif"
-          src="https://i.imgur.com/rg30RZ5.gif"
+          src="https://i.imgur.com/Qxv1Gys.gif"
         />
         <img
           alt="polymr"
           className="polymr-gif"
-          src="https://i.imgur.com/8rBqvvj.gif"
+          src="https://i.imgur.com/GgCiUVY.gif"
         />
         <img
           alt="polymr"
           className="polymr-gif"
-          src="https://i.imgur.com/uWSUDxU.gif"
+          src="https://i.imgur.com/31cWP6r.gif"
         />
       </div>
     </div>
