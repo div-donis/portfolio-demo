@@ -1,6 +1,10 @@
 import React from "react";
 import { Routes, Link, Route } from "react-router-dom";
-import { useState } from "react";
+import { useRef } from "react";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight
+} from "react-icons/md";
 
 const Projects = () => {
   return (
@@ -20,25 +24,18 @@ const Projects = () => {
 };
 
 export const Profile = () => {
-  const [sliderLoad, setSliderLoad] = useState("");
+  let ref = useRef(null);
 
-  const slider = document?.getElementById("polymr-left");
-
-  const slide = (shift) => {
-    setSliderLoad(slider);
-    if (sliderLoad) {
-      slider.scrollLeft += shift;
-    }
+  const scroll = (scrollOffset) => {
+    ref.current.scrollLeft += scrollOffset;
   };
 
-  console.log(slider);
   return (
     <div className="polymr">
-      <div id="left-arrow" onClick={() => slide(-1240)}>
-        {" "}
-        {"<"}{" "}
+      <div id="left-arrow">
+        <MdOutlineKeyboardArrowLeft onClick={() => scroll(-1160)} />
       </div>
-      <div className="project-slider" id="polymr-left">
+      <div className="project-slider" ref={ref}>
         <img
           alt="polymr"
           className="polymr-gif"
@@ -55,9 +52,8 @@ export const Profile = () => {
           src="https://i.imgur.com/31cWP6r.gif"
         />
       </div>
-      <div id="right-arrow" onClick={() => slide(+1240)}>
-        {" "}
-        {">"}{" "}
+      <div id="right-arrow">
+        <MdOutlineKeyboardArrowRight onClick={() => scroll(+1160)} />
       </div>
     </div>
   );

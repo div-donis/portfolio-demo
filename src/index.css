@@ -54,7 +54,7 @@ body {
 .project-links {
   width: 100%;
   position: relative;
-  top: 85px;
+  top: 50px;
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -76,17 +76,19 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 200px;
 }
 .polymr-gif {
-  margin: 85px 120px 0 120px;
+  margin: 50px 80px 50px 80px;
   width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .project-slider {
   scroll-behavior: smooth;
-  margin-top: 110px;
+  margin-top: 50px;
+
   display: flex;
-  width: 1240px;
+  width: 1160px;
   flex-direction: row;
   box-sizing: content-box;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -100,13 +102,25 @@ body {
 .project-slider:last-child {
   margin-right: 0;
 }
-#right-arrow{
-  color: var(--font);
+#right-arrow {
+  font-size: 68px;
+  color: var(--lines);
   align-self: center;
-  padding-top: 195px;
+  padding-top: 50px;
 }
-#left-arrow{
+#right-arrow:active,
+:hover,
+:focus {
   color: var(--font);
+}
+#left-arrow {
+  font-size: 68px;
+  color: var(--lines);
   align-self: center;
-  padding-top: 195px;
+  padding-top: 50px;
+}
+#left-arrow:active,
+:hover,
+:focus {
+  color: var(--font);
 }
