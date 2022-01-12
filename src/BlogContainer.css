@@ -1,14 +1,11 @@
 .blog-container {
   width: 302px;
   height: 570px;
-  margin-left: 240px;
-  position: fixed;
+  position: relative;
   box-sizing: content-box;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 .blog-container::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
