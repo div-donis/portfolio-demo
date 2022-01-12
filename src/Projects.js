@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Link, Route } from "react-router-dom";
 import { useRef } from "react";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -9,26 +8,28 @@ import {
 const Projects = () => {
   return (
     <div className="projects">
-      <ul className="project-links">
-        <li>
-          <Link to="">polymr (beta)</Link>
-        </li>
-      </ul>
+      <div className="project-links">
+        <h1>Polymr</h1>
+      </div>
       <div>
-        <Routes>
-          <Route path="" element={<Profile />}></Route>
-        </Routes>
+        <Polymr />
       </div>
     </div>
   );
 };
 
-export const Profile = () => {
+export const Polymr = () => {
   let ref = useRef(null);
 
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+
+  const gifs = [
+    "https://i.imgur.com/Qxv1Gys.gif",
+    "https://i.imgur.com/GgCiUVY.gif",
+    "https://i.imgur.com/31cWP6r.gif"
+  ];
 
   return (
     <div className="polymr">
@@ -36,21 +37,9 @@ export const Profile = () => {
         <MdOutlineKeyboardArrowLeft onClick={() => scroll(-1160)} />
       </div>
       <div className="project-slider" ref={ref}>
-        <img
-          alt="polymr"
-          className="polymr-gif"
-          src="https://i.imgur.com/Qxv1Gys.gif"
-        />
-        <img
-          alt="polymr"
-          className="polymr-gif"
-          src="https://i.imgur.com/GgCiUVY.gif"
-        />
-        <img
-          alt="polymr"
-          className="polymr-gif"
-          src="https://i.imgur.com/31cWP6r.gif"
-        />
+        {gifs.map((gif) => (
+          <img alt="polymr" className="polymr-gif" src={gif} />
+        ))}
       </div>
       <div id="right-arrow">
         <MdOutlineKeyboardArrowRight onClick={() => scroll(+1160)} />
