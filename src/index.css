@@ -89,6 +89,11 @@ body {
   font-family: var(--sans);
   font-style: italic;
 }
+.project-container li {
+  font-weight: 400;
+  font-family: var(--sans);
+  font-style: italic;
+}
 .project-container a {
   font-weight: 600;
   font-family: var(--sans);
