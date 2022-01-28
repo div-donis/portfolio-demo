@@ -71,8 +71,14 @@ const App = () => {
               )
             }
           ></Route>
-          <Route path="/about" element={small ? null : <About />}></Route>
-          <Route path="/projects" element={small ? null : <Projects />}></Route>
+          <Route
+            path="/about"
+            element={small ? <Navigate to="/" /> : <About />}
+          ></Route>
+          <Route
+            path="/projects"
+            element={small ? <Navigate to="/" /> : <Projects />}
+          ></Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
