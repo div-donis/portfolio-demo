@@ -6,10 +6,7 @@ const Projects = () => {
       <div className="project-container">
         <h1>Polymr</h1>
         <h2>React / Rails Project - collaboration center & task/bug tracker</h2>
-        <a
-          style={{ textDecoration: "none", color: "var(--font)" }}
-          href="https://github.com/div-donis/polymr-beta"
-        >
+        <a href="https://github.com/div-donis/polymr-beta">
           https://github.com/div-donis/polymr-beta
         </a>
         <p>
@@ -24,16 +21,16 @@ const Projects = () => {
           <br />
           You can use the following commands to run the application:
           <br />
+        </p>
+        <ul>
+          <li>rails s : run the backend on http://localhost:3000</li>
           <br />
-          <ul>
-            <li>rails s: run the backend on http://localhost:3000</li>
-            <br />
-            <li>
-              npm start --prefix client: run the frontend on
-              http://localhost:4000
-            </li>
-          </ul>
-          <br />
+          <li>
+            npm start --prefix client : run the frontend on
+            http://localhost:4000
+          </li>
+        </ul>
+        <p>
           To seed the database run:
           <br />
           <br />

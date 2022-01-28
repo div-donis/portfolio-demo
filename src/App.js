@@ -1,9 +1,27 @@
-import React from "react";
-import { NavLink as Link, Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink as Link, Route, Routes, Navigate } from "react-router-dom";
 import Projects from "./Projects";
 import Home from "./Home";
 
 const App = () => {
+  const [small, setSmall] = useState();
+
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      setSmall(true);
+    } else {
+      setSmall(false);
+    }
+  }, []);
+
+  window.addEventListener("resize", function () {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      setSmall(true);
+    } else {
+      setSmall(false);
+    }
+  });
+
   return (
     <div className="App">
       <div className="nav-top">
@@ -35,12 +53,27 @@ const App = () => {
           </div>
         </nav>
       </div>
+
       <div className="main">
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="projects/*" element={<Projects />}></Route>
-          <Route path="*" element={<Home />} />
+          <Route
+            exact
+            path="/"
+            element={
+              small ? (
+                <>
+                  <Home />
+                  <Projects />
+                  <About />
+                </>
+              ) : (
+                <Home />
+              )
+            }
+          ></Route>
+          <Route path="/about" element={small ? null : <About />}></Route>
+          <Route path="/projects" element={small ? null : <Projects />}></Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
     </div>
@@ -53,10 +86,6 @@ export const About = () => {
       This is the page where you put details about yourself
     </div>
   );
-};
-
-export const NotFound = () => {
-  return <div>This is a 404 page</div>;
 };
 
 export default App;
