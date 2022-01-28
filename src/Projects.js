@@ -1,57 +1,63 @@
 import React from "react";
-import { useRef } from "react";
-import {
-  MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight
-} from "react-icons/md";
 
 const Projects = () => {
   return (
     <div className="projects">
-      <div className="project-links">
+      <div className="project-container">
         <h1>Polymr</h1>
-      </div>
-      <div>
-        <Polymr />
+        <h2>React / Rails Project - collaboration center & task/bug tracker</h2>
+        <a
+          style={{ textDecoration: "none", color: "var(--font)" }}
+          href="https://github.com/div-donis/polymr-beta"
+        >
+          https://github.com/div-donis/polymr-beta
+        </a>
+        <p>
+          To launch this project in localhost, fork this repository then run:
+          <br />
+          <br />
+          bundle install
+          <br />
+          <br />
+          npm install --prefix client
+          <br />
+          <br />
+          You can use the following commands to run the application:
+          <br />
+          <br />
+          <ul>
+            <li>rails s: run the backend on http://localhost:3000</li>
+            <br />
+            <li>
+              npm start --prefix client: run the frontend on
+              http://localhost:4000
+            </li>
+          </ul>
+          <br />
+          To seed the database run:
+          <br />
+          <br />
+          rails db:migrate
+          <br />
+          <br />
+          rails db:seed
+          <br />
+          <br />
+          in the db directory, seeds.rb holds test user. You can use this
+          information to log in:
+          <br />
+          <br />
+          email: 'polymr@test.me' password: 'polymrtest1'
+          <br />
+          <br />
+          This build is still in development. Feel free to contact me or make
+          pull requests.
+          <br />
+          <br />
+        </p>
       </div>
     </div>
   );
-};
-
-export const Polymr = () => {
-  let ref = useRef(null);
-
-  const scroll = (scrollOffset) => {
-    ref.current.scrollLeft += scrollOffset;
-  };
-
-  const gifs = [
-    "https://i.imgur.com/Qxv1Gys.gif",
-    "https://i.imgur.com/GgCiUVY.gif",
-    "https://i.imgur.com/31cWP6r.gif"
-  ];
-
-  return (
-    <div className="polymr">
-      <div id="left-arrow">
-        <MdOutlineKeyboardArrowLeft onClick={() => scroll(-1160)} />
-      </div>
-      <div className="project-slider" ref={ref}>
-        {gifs.map((gif) => (
-          <img alt="polymr" className="polymr-gif" src={gif} />
-        ))}
-      </div>
-      <div id="right-arrow">
-        <MdOutlineKeyboardArrowRight onClick={() => scroll(+1160)} />
-      </div>
-    </div>
-  );
-};
-export const Orders = () => {
-  return <></>;
-};
-export const Quotes = () => {
-  return <></>;
 };
 
 export default Projects;

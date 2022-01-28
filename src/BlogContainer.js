@@ -1,6 +1,5 @@
 import React from "react";
 import BlogCard from "./BlogCard";
-import "./BlogContainer.css";
 
 const BlogContainer = ({ posts }) => {
   const stripHtml = (html) => {

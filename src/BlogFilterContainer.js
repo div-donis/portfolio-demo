@@ -1,6 +1,5 @@
 import React from "react";
 import BlogFilterCard from "./BlogFilterCard";
-import "./BlogFilterContainer.css";
 
 const BlogFilterContainer = ({ langs, activeLang, setActiveLang }) => {
   return (

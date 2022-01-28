@@ -5,8 +5,12 @@ import Avi from "./Avi";
 const Home = () => {
   return (
     <div className="home">
-      <Blog />
-      <Avi />
+      <h1>Donovan Odom</h1>
+      <h2>FullStack Web Developer</h2>
+      <div className="home-flex">
+        <Blog />
+        <Avi />
+      </div>
     </div>
   );
 };
