@@ -77,7 +77,6 @@ body {
   font-size: 50px;
   font-family: var(--serif);
   align-self: center;
-  text-decoration: underline;
 }
 .project-container h2 {
   text-align: center;
@@ -104,6 +103,31 @@ body {
 .home h1,
 h2 {
   user-select: none;
+}
+.about-container {
+  user-select: none;
+  margin: 100px auto 100px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.about h1 {
+  font-weight: 800;
+  font-size: 50px;
+  font-family: var(--serif);
+  align-self: center;
+}
+.about p {
+  font-weight: 400;
+  font-family: var(--sans);
+}
+#email {
+  display: inline;
+  text-decoration: underline;
+  font-weight: 500;
+  user-select: all;
 }
 
 /* small */
