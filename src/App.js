@@ -53,9 +53,16 @@ const App = () => {
           </div>
         </nav>
       </div>
-
       <div className="main">
         <Routes>
+          <Route
+            path="/about"
+            element={small ? <Navigate to="/" /> : <About />}
+          ></Route>
+          <Route
+            path="/projects"
+            element={small ? <Navigate to="/" /> : <Projects />}
+          ></Route>
           <Route
             exact
             path="/"
@@ -71,15 +78,7 @@ const App = () => {
               )
             }
           ></Route>
-          <Route
-            path="/about"
-            element={small ? <Navigate to="/" /> : <About />}
-          ></Route>
-          <Route
-            path="/projects"
-            element={small ? <Navigate to="/" /> : <Projects />}
-          ></Route>
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </div>
@@ -91,7 +90,7 @@ export const About = () => {
     <div className="about">
       <div className="about-container">
         <h1>Portrait</h1>
-        <p>
+        <span>
           Thank you for visiting my portfolio! My name is Donovan, or Don- I’m a
           FullStack web developer that specializes in React, JavaScript & Redux
           frontend & Ruby/RoR backend. I enjoy organizing ways to make web
@@ -111,7 +110,7 @@ export const About = () => {
           past 10 years and in various Medical Laboratory roles for the past 7
           years beginning in St. louis, MO and now in Seattle, WA. To contact
           me, Please email <div id="email">donovan-odom@outlook.com</div>.
-        </p>
+        </span>
       </div>
     </div>
   );

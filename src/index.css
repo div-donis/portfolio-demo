@@ -119,7 +119,7 @@ h2 {
   font-family: var(--serif);
   align-self: center;
 }
-.about p {
+.about span {
   font-weight: 400;
   font-family: var(--sans);
 }
