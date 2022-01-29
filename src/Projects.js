@@ -44,7 +44,9 @@ const Projects = () => {
           information to log in:
           <br />
           <br />
-          email: 'polymr@test.me' password: 'polymrtest1'
+          email: 'polymr@test.me'
+          <br />
+          password: 'polymrtest1'
           <br />
           <br />
           This build is still in development. Feel free to contact me or make

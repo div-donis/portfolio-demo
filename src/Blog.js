@@ -27,7 +27,7 @@ const Blog = () => {
   }, [axios]);
 
   const [activeLang, setActiveLang] = useState("All");
-  const langs = ["All", "JS", "React", "Redux", "Ruby", "Rails", "AWS", "SQL"];
+  const langs = ["All", "JS", "CSS", "React", "Redux", "Ruby", "Rails", "AWS"];
 
   const filteredBlogs = blog.item.filter((i) =>
     i.categories.includes(activeLang.toLowerCase())
