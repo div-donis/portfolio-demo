@@ -120,6 +120,7 @@ h2 {
   align-self: center;
 }
 .about span {
+  display: block;
   font-weight: 400;
   font-family: var(--sans);
 }
@@ -184,7 +185,6 @@ h2 {
     margin-bottom: 30px; /* <------------ */
   }
   .blog {
-    width: 500px;
     display: flex;
     flex-direction: column; /* <------------ */
     justify-content: center;
