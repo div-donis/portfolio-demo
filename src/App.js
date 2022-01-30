@@ -94,8 +94,8 @@ export const About = () => {
           Thank you for visiting my portfolio! My name is Donovan, or Don- I’m a
           FullStack web developer that specializes in React, JavaScript & Redux
           frontend & Ruby/RoR backend. I enjoy organizing ways to make web
-          development for efficient, coordinating innovative & communicative
-          ways to meet client arrangements & most of all, building projects and
+          development efficient, coordinating innovative & communicative ways to
+          meet client arrangements & most of all, building projects and
           implementing new technologies to challenge myself as a developer.
           <br />
           <br />
