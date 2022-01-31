@@ -101,15 +101,14 @@ export const About = () => {
           <br />
           As a future Alumni of Flatiron school for Computer Software
           Engineering (Graduating Feb 2022), I am looking forward to advancing
-          my career and implementing my skills the tech industry, as well as
-          furthering my education in the field & being a resource for others who
-          have a passion for tech.
+          my career in the tech industry and furthering my education in the
+          field while being a resource for others who have a passion for tech.
           <br />
           <br />
           I’ve worked as a freelance audio-engineer, producer & artist for the
           past 10 years and in various Medical Laboratory roles for the past 7
           years beginning in St. louis, MO and now in Seattle, WA. To contact
-          me, Please email <div id="email">donovan-odom@outlook.com</div>.
+          me, please email <div id="email">donovan-odom@outlook.com</div>.
         </span>
       </div>
     </div>
