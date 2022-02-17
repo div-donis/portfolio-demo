@@ -108,7 +108,7 @@ export const About = () => {
           I’ve worked as a freelance audio-engineer, producer & artist for the
           past 10 years and in various Medical Laboratory roles for the past 7
           years beginning in St. louis, MO and now in Seattle, WA. To contact
-          me, please email <div id="email">donovan-odom@outlook.com</div>.
+          me, please email <div id="email">314deo@gmail.com</div>.
         </span>
       </div>
     </div>
